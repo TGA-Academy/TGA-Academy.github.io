@@ -230,7 +230,7 @@ nav {
           font-size:       14px;
           line-height:     20px;
           font-weight:     500;
-          color:           white;
+          color:           var(--gray-900);
           text-decoration: none;
           padding:         8px 12px 10px 12px;
           border-radius:   6px;
@@ -239,7 +239,7 @@ nav {
             background-color: var(--raven-red);
           }
           svg {
-            color:       white;
+            color:       var(--gray-900);
             height:      12px;
             width:       12px;
             margin-left: 5px;
