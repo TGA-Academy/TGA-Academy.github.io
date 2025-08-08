@@ -214,7 +214,7 @@ nav {
     button[data-nav-toggle] {
       height:  38px;
       width:   38px;
-      color:   white;
+      color:   var(--gray-900);
       display: none;
     }
     > ul {
