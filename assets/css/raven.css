@@ -458,7 +458,7 @@ form[data-leads-form] {
     .location {
       margin-top: 2rem;
       display:    flex;
-      color:      white;
+      color:      var(--raven-blue);
       svg {
         width:        3rem;
         height:       3rem;
