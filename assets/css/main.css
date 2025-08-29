@@ -2,7 +2,6 @@
 
 :root {
   --vip-primary:   rgb(150, 156, 198);
-  --vip-secondary: rgb(225, 252, 193);
   --vip-gray:      rgb(248, 249, 251);
   --gray-900:      rgb(17, 24, 39);
   --slate-600:     rgb(71, 85, 105);
@@ -71,7 +70,7 @@ p.important {
 }
 
 a {
-  color: var(--vip-secondary);
+  color: var(--vip-primary);
   &:hover {
     text-decoration: undeline;
   }
@@ -105,15 +104,12 @@ ul {
 .text-center {
   text-align: center;
 }
-.text-red {
-  color: var(--vip-secondary);
-}
 a.large-button {
   display:          inline-block;
   font-size:        1.25rem;
   line-height:      1.75rem;
   font-weight:      600;
-  background-color: var(--vip-secondary);
+  background-color: var(--vip-primary);
   color:            white;
   padding:          1rem 1.5rem;
   border-radius:    0.5rem;
@@ -280,7 +276,8 @@ nav {
           border-radius:   6px;
           &:hover,
           &.active {
-            background-color: var(--vip-secondary);
+            color:            var(--slate-600);
+            background-color: white;
           }
           svg {
             color:       white;
@@ -311,7 +308,7 @@ nav {
             text-decoration:  none;
             padding:          10px 20px;
             &:hover {
-              color:            var(--vip-secondary);
+              color:            var(--vip-primary);
               background-color: var(--vip-gray);
             }
           }
@@ -445,7 +442,7 @@ form.formatted-form {
     }
   }
   button {
-    background-color: var(--vip-secondary);
+    background-color: var(--vip-primary);
     color:            white;
     padding:          6px 12px;
     border-radius:    6px;
