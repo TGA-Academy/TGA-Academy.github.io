@@ -561,12 +561,13 @@ form[data-leads-form] {
 
 @media (max-width: 768px) {
   .page-index {
-  .form-wrapper {
-    .formatted-form {
-      .form-fields {
-        display: block;
-        > * {
-          margin-bottom: 24px;
+    .form-wrapper {
+      .formatted-form {
+        .form-fields {
+          display: block;
+          > * {
+            margin-bottom: 24px;
+          }
         }
       }
     }
