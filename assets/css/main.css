@@ -1,15 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-  --raven-blue:    rgb(28, 46, 79);
-  --raven-red:     rgb(235, 25, 70);
-  --raven-gray:    rgb(248, 249, 251);
+  --vip-primary:   rgb(150, 156, 198);
+  --vip-secondary: rgb(225, 252, 193);
+  --vip-gray:      rgb(248, 249, 251);
   --gray-900:      rgb(17, 24, 39);
   --slate-600:     rgb(71, 85, 105);
   --max-width:     70rem;
   --nav-height:    70px;
   --shadow:        rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
-  --shadow-red:    rgba(235, 25, 70, 0.5) 0px 2px 10px 0px;
   --tint-gradient: linear-gradient(rgba(28, 46, 79, 0.70), rgba(28, 46, 79, 0.70));
 }
 
@@ -72,7 +71,7 @@ p.important {
 }
 
 a {
-  color: var(--raven-red);
+  color: var(--vip-secondary);
   &:hover {
     text-decoration: undeline;
   }
@@ -107,14 +106,14 @@ ul {
   text-align: center;
 }
 .text-red {
-  color: var(--raven-red);
+  color: var(--vip-secondary);
 }
 a.large-button {
   display:          inline-block;
   font-size:        1.25rem;
   line-height:      1.75rem;
   font-weight:      600;
-  background-color: var(--raven-red);
+  background-color: var(--vip-secondary);
   color:            white;
   padding:          1rem 1.5rem;
   border-radius:    0.5rem;
@@ -131,7 +130,7 @@ a.large-button {
   .hero-content {
     h1, p {
       color: white;
-      text-shadow: 2px 2px var(--raven-blue);
+      text-shadow: 2px 2px black;
     }
     small {
       margin-top: 1rem;
@@ -218,7 +217,7 @@ section {
 }
 
 .section-bg {
-  background-color: var(--raven-gray);
+  background-color: var(--vip-gray);
 }
 
 @media (max-width: 768px) {
@@ -234,7 +233,7 @@ section {
 
 /* -- Navigation ----------------------------------------------------------- */
 nav {
-  background-color: var(--raven-blue);
+  background-color: var(--vip-primary);
   position:         fixed;
   top:              0;
   width:            100%;
@@ -281,7 +280,7 @@ nav {
           border-radius:   6px;
           &:hover,
           &.active {
-            background-color: var(--raven-red);
+            background-color: var(--vip-secondary);
           }
           svg {
             color:       white;
@@ -308,12 +307,12 @@ nav {
             display:          block;
             white-space:      nowrap;
             font-size:        14px;
-            color:            var(--raven-blue);
+            color:            var(--vip-primary);
             text-decoration:  none;
             padding:          10px 20px;
             &:hover {
-              color:            var(--raven-red);
-              background-color: var(--raven-gray);
+              color:            var(--vip-secondary);
+              background-color: var(--vip-gray);
             }
           }
         }
@@ -355,7 +354,7 @@ nav {
 
 /* -- Footer --------------------------------------------------------------- */
 footer {
-  background-color: var(--raven-blue);
+  background-color: var(--vip-primary);
   color:            white;
 
   iframe {
@@ -446,7 +445,7 @@ form.formatted-form {
     }
   }
   button {
-    background-color: var(--raven-red);
+    background-color: var(--vip-secondary);
     color:            white;
     padding:          6px 12px;
     border-radius:    6px;
@@ -458,7 +457,7 @@ form.formatted-form {
 }
 
 form[data-leads-form] {
-  background-color: var(--raven-gray);
+  background-color: var(--vip-gray);
   flex-shrink:      0;
   width:            350px;
   box-shadow:       var(--shadow);
@@ -513,7 +512,7 @@ form[data-leads-form] {
     }
   }
   #countdown-wrapper {
-    background-color: var(--raven-gray);
+    background-color: var(--vip-gray);
     #countdown {
       display:         flex;
       gap:             0.5rem;
@@ -596,7 +595,7 @@ body.page-schedule {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
   .r-calendar-day {
-    background-color: var(--raven-gray);
+    background-color: var(--vip-gray);
     border-radius:    5px;
   }
   .r-calendar-day-name {
@@ -652,7 +651,7 @@ body.page-schedule {
     background-color: #009aa4;
   }
   .r-event-off {
-    background-color: var(--raven-gray);
+    background-color: var(--vip-gray);
     color: #212529;
   }
   .r-event-kids-teens {
