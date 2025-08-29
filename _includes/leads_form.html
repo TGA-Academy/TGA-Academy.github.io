@@ -1,0 +1,56 @@
+<form data-leads-form method="post" action="/contact" id="leads-form" class="formatted-form">
+  <div class="success-message">
+    <h3>
+      Thank You For Your Interest!
+    </h3>
+    <p>
+      We’ll be in touch with you shortly.
+    </p>
+    <p>
+      For more information, feel free to call or text us at
+      <a href="tel:+17785555555">(778) 555-5555</a> or email us at
+      <a href="mailto:info@womenvip.ca">info@womenvip.ca</a>
+    </p>
+  </div>
+
+  <div class="failure-message">
+    <h3>
+      Something Went Wrong :(
+    </h3>
+    <p>
+      Please call or text us at
+      <a href="tel:+17785555555">(778) 555-5555</a> or email us at
+      <a href="mailto:info@womenvip.ca">info@womenvip.ca</a>
+      instead. Thank you!
+    </p>
+  </div>
+
+  <div class="form">
+    <h3>
+      Reserve your spot
+    </h3>
+
+    <input type="hidden" name="external" value="1">
+
+    <div class="form-fields">
+      <div class="form-field">
+        <label for="name">Your Name</label>
+        <input type="text" name="name" required />
+      </div>
+
+      <div class="form-field">
+        <label for="email">Email Address</label>
+        <input type="email" name="email" required />
+      </div>
+
+      <div class="form-field">
+        <label for="phone">Phone Number</label>
+        <input type="text" name="phone" required />
+      </div>
+
+      <button type="submit">
+        <strong>Get Started Today</strong>
+      </button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,100 @@
+---
+title: Women VIP - Wellness is not a trend- it's your foundation
+layout: default
+permalink: /
+---
+
+<div class="hero">
+  <section class="flex items-center gap-lg">
+    <div class="hero-content">
+      <h1>
+        Wellness is not a trend &mdash; it’s your foundation
+      </h1>
+      <p>
+        Step into a space where fitness is elevated, tailored, and redefined for modern woman
+      </p>
+      <p>
+        Our exclusive programs combine elite training, practical exercises, and luxury amenities in a supportive, and woman-focused environment
+      </p>
+      <p>
+        Designed by top-tier female trainers, this is more than a workout - it's a lifestyle transformation
+      </p>
+
+      <div class="location">
+        {% include svg/map-pin.svg %}
+        <div>
+          Austin Heights, Coquitlam<br>
+          5 minutes from Lougheed Town Centre
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div id="countdown-wrapper">
+  <section>
+    <div class="text-center">
+      <h2>
+        Classes start on September 27, 2025
+      </h2>
+      <div id="countdown"></div>
+    </div>
+
+    <script src="/assets/js/countdown.js"></script>
+    <script>
+      simplyCountdown("#countdown", {
+        year:      2025,
+        month:     9,
+        day:       27,
+        hours:     8,
+        enableUtc: true,
+        onEnd: () => {
+          document.getElementById("countdown-wrapper").remove()
+        }
+      });
+    </script>
+  </section>
+</div>
+
+<section class="form-wrapper">
+  {% include leads_form.html %}
+</section>
+
+<div class="section-bg">
+  <section>
+    <h2 class="text-center">
+      Unlock your full potential with an elite program tailored to help you build Strength, Tone Your Core, Gain Flexibility and have fun in an exclusive and supportive environment
+    </h2>
+
+    <p class="subheader text-center">
+      Invest in Yourself  and focus on functional movements that are designed to maximize your time for better results!
+    </p>
+
+    <div class="flex flex-center">
+      <ul class="with-bullets">
+        <li>
+          {% include svg/check.svg %}
+          Women-Only Environment
+        </li>
+        <li>
+          {% include svg/check.svg %}
+          Elite Female Trainers
+        </li>
+        <li>
+          {% include svg/check.svg %}
+          Low Client to Trainer Ratios
+        </li>
+        <li>
+          {% include svg/check.svg %}
+          Flexible Membership Options
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<section class="text-center">
+  <a href="#leads-form" class="large-button" data-scroll-button>
+    Get Started Today
+  </a>
+</section>
