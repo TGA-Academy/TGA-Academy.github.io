@@ -246,7 +246,12 @@ nav {
     min-height:      var(--nav-height);
     padding:         1rem;
     .logo {
-      height: 32px;
+      display:     flex;
+      align-items: center;
+      gap:         0.5rem;
+      height:      32px;
+      color:       white;
+      font-size:   1.25rem;
       img {
         height: 100%;
       }
@@ -351,6 +356,7 @@ nav {
 /* -- Footer --------------------------------------------------------------- */
 footer {
   background-color: var(--raven-blue);
+  color:            white;
 
   iframe {
     margin-bottom: 2rem;
