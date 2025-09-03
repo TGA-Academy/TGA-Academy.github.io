@@ -550,6 +550,58 @@ form[data-leads-form] {
   }
 }
 
+/* -- Memberships ---------------------------------------------------------- */
+body.page-membership {
+  .memberships {
+    display:   flex;
+    flex-wrap: wrap;
+    gap:       2rem;
+    > a {
+      display: block;
+      flex:          0 0 calc(50% - 1rem);
+      box-shadow:    var(--shadow);
+      padding:       1rem;
+      border-radius: 0.5rem;
+      color:         var(--slate-600);
+      &:hover {
+        background-color: var(--vip-gray);
+      }
+      .description {
+        display:     flex;
+        align-items: center;
+        p {
+          margin-bottom: 0;
+        }
+        .cost {
+          margin-left:    auto;
+          display:        flex;
+          flex-direction: column;
+          align-items:    center;
+          .amount {
+            font-size:   2rem;
+            font-weight: bold;
+          }
+          .per {
+            font-size:      0.75rem;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body.page-membership {
+    .memberships {
+      display: block;
+      > a {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+
 /* -- Schedule ------------------------------------------------------------- */
 body.page-schedule {
   .r-calendar {
