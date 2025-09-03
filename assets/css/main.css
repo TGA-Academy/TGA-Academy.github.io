@@ -278,6 +278,9 @@ nav {
           &.active {
             color:            var(--slate-600);
             background-color: white;
+            svg {
+              color: var(--slate-600);
+            }
           }
           svg {
             color:       white;
@@ -540,7 +543,7 @@ form[data-leads-form] {
         margin-bottom: 2rem;
       }
       width:            100%;
-      background-color: white;
+      background-color: transparent;
       box-shadow:       none;
       padding:          0;
       .form-fields {

@@ -5,16 +5,26 @@
       <div>Women VIP</div>
     </a>
     <button type="button" data-nav-toggle>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-        <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
-      </svg>
+      {% include svg/nav-dropdown.svg %}
     </button>
 
     <ul data-nav>
       <li>
-        <a href="/about-us" class="{% if page.name contains "about-us" %}active{% endif %}">
+        {% assign about_pages = "/meet-the-team, /our-story" | split: ", " %}
+        <a href="#" data-nav-dropdown class="{% if about_pages contains page.url %}active{% endif %}">
           About Us
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+          </svg>
         </a>
+        <ul>
+          <li>
+            <a href="/our-story">Our Story</a>
+          </li>
+          <li>
+            <a href="/meet-the-team">Meet the Team</a>
+          </li>
+        </ul>
       </li>
       <li>
         <a href="/classes" class="{% if page.name contains "classes" %}active{% endif %}">
