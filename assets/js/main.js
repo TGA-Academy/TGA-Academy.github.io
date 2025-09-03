@@ -3,6 +3,17 @@ window.onload = () => {
     .querySelector("[data-nav-toggle]")
     .addEventListener("click", toggleNav);
 
+  window.addEventListener("click", (event) => {
+    const withinBoundaries = event
+      .composedPath()
+      .includes(document.querySelector("[data-nav-dropdown]"));
+    if (!withinBoundaries) {
+      document
+        .querySelector("[data-nav-dropdown]")
+        .nextElementSibling.classList.remove("show");
+    }
+  });
+
   document.querySelectorAll("[data-nav-dropdown]").forEach((element) => {
     element.addEventListener("click", toggleDropdown);
   });
