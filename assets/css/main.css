@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
   --vip-primary:   rgb(150, 156, 198);
@@ -8,7 +8,7 @@
   --max-width:     70rem;
   --nav-height:    70px;
   --shadow:        rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
-  --tint-gradient: linear-gradient(rgba(28, 46, 79, 0.70), rgba(28, 46, 79, 0.70));
+  --tint-gradient: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
 }
 
 html {
@@ -124,9 +124,9 @@ a.large-button {
   background-size:     cover;
   background-position: center center;
   .hero-content {
+    font-family: "Didact Gothic", sans-serif;
     h1, p {
       color: white;
-      text-shadow: 2px 2px black;
     }
     small {
       margin-top: 1rem;
@@ -499,7 +499,7 @@ form[data-leads-form] {
     width:         100%;
     margin-bottom: 0;
   }
-  .formatted-form {
+  form.formatted-form {
     .form-fields {
       display: block;
       > * {
@@ -512,7 +512,7 @@ form[data-leads-form] {
 /* -- Index ---------------------------------------------------------------- */
 .page-index {
   .hero {
-    background-image: var(--tint-gradient), url(/assets/images/bg.jpg);
+    background-image: var(--tint-gradient), url(/assets/images/index/hero.jpg);
     .location {
       margin-top: 2rem;
       display:    flex;
