@@ -10,6 +10,21 @@
 
     <ul data-nav>
       <li>
+        <a href="/classes" class="{% if page.name contains "classes" %}active{% endif %}">
+          Classes
+        </a>
+      </li>
+      <li>
+        <a href="/membership" class="{% if page.name contains "membership" %}active{% endif %}">
+          Membership
+        </a>
+      </li>
+      <li>
+        <a href="/schedule" class="{% if page.name contains "schedule" %}active{% endif %}">
+          Schedule
+        </a>
+      </li>
+      <li>
         {% assign about_pages = "/meet-the-team, /our-story" | split: ", " %}
         <a href="#" data-nav-dropdown class="{% if about_pages contains page.url %}active{% endif %}">
           About Us
@@ -25,21 +40,6 @@
             <a href="/meet-the-team">Meet the Team</a>
           </li>
         </ul>
-      </li>
-      <li>
-        <a href="/classes" class="{% if page.name contains "classes" %}active{% endif %}">
-          Classes
-        </a>
-      </li>
-      <li>
-        <a href="/membership" class="{% if page.name contains "membership" %}active{% endif %}">
-          Membership
-        </a>
-      </li>
-      <li>
-        <a href="/schedule" class="{% if page.name contains "schedule" %}active{% endif %}">
-          Schedule
-        </a>
       </li>
       <li>
         <a href="https://women-vip.gymdesk.com/login" target="_blank">Login</a>

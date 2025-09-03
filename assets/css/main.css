@@ -408,61 +408,67 @@ footer {
 
 /* -- Leads Form ----------------------------------------------------------- */
 form.formatted-form {
-  .form-field {
-    margin-bottom: 24px;
-    label {
-      display:       block;
-      margin-bottom: 5px;
-      font-size:     14px;
-      line-height:   20px;
-      font-weight:   500;
-      color:         var(--gray-900);
-      margin-bottom: 0.5rem;
+  .form-fields {
+    display:     flex;
+    align-items: flex-end;
+    gap:         1rem;
+    .form-field {
+      label {
+        display:       block;
+        margin-bottom: 5px;
+        font-size:     14px;
+        line-height:   20px;
+        font-weight:   500;
+        color:         var(--gray-900);
+        margin-bottom: 0.5rem;
+      }
+      input,
+      select {
+        display:          block;
+        width:            100%;
+        font-size:        14px;
+        line-height:      24px;
+        background-color: white;
+        border:           0;
+        border-radius:    6px;
+        padding:          6px 12px;
+        box-shadow:
+          rgb(255, 255, 255) 0px 0px 0px 0px inset,
+          rgb(209, 213, 219) 0px 0px 0px 1px inset,
+          rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+      }
+      select {
+        appearance:          none;
+        background-image:    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+        background-position: right 0.5rem center;
+        background-repeat:   no-repeat;
+        background-size:     1.5em 1.5em;
+        padding-right:       2.5rem;
+      }
     }
-    input,
-    select {
-      display:          block;
-      width:            100%;
-      font-size:        14px;
-      line-height:      24px;
-      background-color: white;
-      border:           0;
-      border-radius:    6px;
+    > * {
+      flex:          1 1 0;
+      margin-bottom: 0;
+    }
+    button {
+      flex:             0;
+      white-space:      nowrap;
+      background-color: var(--vip-primary);
+      color:            white;
       padding:          6px 12px;
-      box-shadow:
-        rgb(255, 255, 255) 0px 0px 0px 0px inset,
-        rgb(209, 213, 219) 0px 0px 0px 1px inset,
-        rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-    }
-    select {
-      appearance:          none;
-      background-image:    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
-      background-position: right 0.5rem center;
-      background-repeat:   no-repeat;
-      background-size:     1.5em 1.5em;
-      padding-right:       2.5rem;
-    }
-  }
-  button {
-    background-color: var(--vip-primary);
-    color:            white;
-    padding:          6px 12px;
-    border-radius:    6px;
-    width:            100%;
-    &:hover {
-      opacity: 0.85;
+      border-radius:    6px;
+      width:            100%;
+      &:hover {
+        opacity: 0.85;
+      }
     }
   }
 }
 
 form[data-leads-form] {
-  background-color: var(--vip-gray);
-  flex-shrink:      0;
-  width:            350px;
-  box-shadow:       var(--shadow);
   padding:          1rem;
   border-radius:    6px;
-  h3 {
+  h2 {
     text-align: center;
   }
   .success-message,
@@ -492,6 +498,14 @@ form[data-leads-form] {
   form[data-leads-form] {
     width:         100%;
     margin-bottom: 0;
+  }
+  .formatted-form {
+    .form-fields {
+      display: block;
+      > * {
+        margin-bottom: 24px;
+      }
+    }
   }
 }
 
@@ -534,55 +548,10 @@ form[data-leads-form] {
       }
     }
   }
-  .form-wrapper {
-    .formatted-form {
-      h3 {
-        font-size:     1.5rem;
-        line-height:   2rem;
-        font-weight:   600;
-        margin-bottom: 2rem;
-      }
-      width:            100%;
-      background-color: transparent;
-      box-shadow:       none;
-      padding:          0;
-      .form-fields {
-        display:     flex;
-        align-items: flex-end;
-        gap: 1rem;
-        > * {
-          flex:          1 1 0;
-          margin-bottom: 0;
-        }
-        button {
-          flex:        0;
-          white-space: nowrap;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .page-index {
-    .form-wrapper {
-      .formatted-form {
-        .form-fields {
-          display: block;
-          > * {
-            margin-bottom: 24px;
-          }
-        }
-      }
-    }
-  }
 }
 
 /* -- Schedule ------------------------------------------------------------- */
 body.page-schedule {
-  --color-adult-all-transitions: #6ba89d;
-  --color-adult-all-submissions: #e21944;
-
   .r-calendar {
     display:               grid;
     grid-template-columns: auto 1fr;
@@ -606,7 +575,7 @@ body.page-schedule {
   .r-calendar-day-events {
     display:            grid;
     gap:                2px;
-    grid-template-rows: repeat(16, 50px);
+    grid-template-rows: repeat(10, 50px);
   }
   .r-calendar-day-event {
     display:          flex;
@@ -615,47 +584,16 @@ body.page-schedule {
     padding:          10px;
     text-align:       center;
     color:            #fff;
-    background-color: #f5f5f5;
+    background-color: var(--vip-primary);
     border-radius:    5px;
     font-size:        14px;
   }
   .r-calendar-day-event-time {
     font-weight: 600;
   }
-  .r-calendar-day-event-gi {
-    font-style: italic;
-  }
-  .r-event-defence {
-    background-color: var(--color-womens-defence);
-  }
-  .r-event-private {
-    background-color: #0076a8;
-  }
-  .r-event-kids {
-    background-color: #9d2273;
-  }
-  .r-event-teens {
-    background-color: #697da2;
-  }
-  .r-event-adult-all-transitions {
-    background-color: var(--color-adult-all-transitions);
-  }
-  .r-event-adult-all-submissions {
-    background-color: var(--color-adult-all-submissions);
-  }
-  .r-event-adult-beginners {
-    background-color: black;
-  }
-  .r-event-open-mat {
-    background-color: #009aa4;
-  }
   .r-event-off {
     background-color: var(--vip-gray);
     color: #212529;
-  }
-  .r-event-kids-teens {
-    background-color: #697da2;
-    background-image: linear-gradient(to bottom right, #9d2273, #697da2);
   }
 
   .r-event-start-1  { grid-row-start: 1; }
@@ -669,12 +607,6 @@ body.page-schedule {
   .r-event-start-9  { grid-row-start: 9; }
   .r-event-start-10 { grid-row-start: 10; }
   .r-event-start-11 { grid-row-start: 11; }
-  .r-event-start-12 { grid-row-start: 12; }
-  .r-event-start-13 { grid-row-start: 13; }
-  .r-event-start-14 { grid-row-start: 14; }
-  .r-event-start-15 { grid-row-start: 15; }
-  .r-event-start-16 { grid-row-start: 16; }
-  .r-event-start-17 { grid-row-start: 17; }
   .r-event-end-1  { grid-row-end: 1; }
   .r-event-end-2  { grid-row-end: 2; }
   .r-event-end-3  { grid-row-end: 3; }
@@ -687,21 +619,6 @@ body.page-schedule {
   .r-event-end-10 { grid-row-end: 10; }
   .r-event-end-11 { grid-row-end: 11; }
   .r-event-end-12 { grid-row-end: 12; }
-  .r-event-end-13 { grid-row-end: 13; }
-  .r-event-end-14 { grid-row-end: 14; }
-  .r-event-end-15 { grid-row-end: 15; }
-  .r-event-end-16 { grid-row-end: 16; }
-  .r-event-end-17 { grid-row-end: 17; }
-
-  p.transitions-focus {
-    color: var(--color-adult-all-transitions);
-  }
-  p.submissions-focus {
-    color: var(--color-adult-all-submissions);
-  }
-  p.womens-defence {
-    color: var(--color-womens-defence);
-  }
 
   @media (max-width: 991.98px) {
     .r-calendar,
