@@ -513,6 +513,7 @@ form[data-leads-form] {
 .page-index {
   .hero {
     background-image: var(--tint-gradient), url(/assets/images/index/hero.jpg);
+    background-position: center center;
     .location {
       margin-top: 2rem;
       display:    flex;
@@ -551,7 +552,7 @@ form[data-leads-form] {
 }
 
 /* -- Memberships ---------------------------------------------------------- */
-body.page-membership {
+body.page-memberships {
   .memberships {
     display:   flex;
     flex-wrap: wrap;
@@ -592,7 +593,7 @@ body.page-membership {
 }
 
 @media (max-width: 768px) {
-  body.page-membership {
+  body.page-memberships {
     .memberships {
       display: block;
       > a {
