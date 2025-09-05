@@ -204,12 +204,6 @@ section {
       width: 450px;
     }
   }
-  .reviews {
-    div {
-      background-color: white;
-      padding:          1rem;
-    }
-  }
 }
 
 .section-bg {
