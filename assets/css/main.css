@@ -552,7 +552,7 @@ body.page-memberships {
     flex-wrap: wrap;
     gap:       2rem;
     > a {
-      display: block;
+      display:       flex;
       flex:          0 0 calc(50% - 1rem);
       box-shadow:    var(--shadow);
       padding:       1rem;
@@ -561,25 +561,21 @@ body.page-memberships {
       &:hover {
         background-color: var(--vip-gray);
       }
-      .description {
-        display:     flex;
-        align-items: center;
-        p {
-          margin-bottom: 0;
+      p {
+        margin-bottom: 0;
+      }
+      .cost {
+        margin-left:    auto;
+        display:        flex;
+        flex-direction: column;
+        align-items:    center;
+        .amount {
+          font-size:   2rem;
+          font-weight: bold;
         }
-        .cost {
-          margin-left:    auto;
-          display:        flex;
-          flex-direction: column;
-          align-items:    center;
-          .amount {
-            font-size:   2rem;
-            font-weight: bold;
-          }
-          .per {
-            font-size:      0.75rem;
-            text-transform: uppercase;
-          }
+        .per {
+          font-size:      0.75rem;
+          text-transform: uppercase;
         }
       }
     }
