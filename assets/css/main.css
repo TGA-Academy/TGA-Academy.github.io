@@ -543,6 +543,32 @@ form[data-leads-form] {
       }
     }
   }
+  .team {
+    display:         flex;
+    justify-content: center;
+    gap:             1rem;
+    flex-wrap:       wrap;
+    a {
+      flex:             0 0 1;
+      width:            300px;
+      display:          block;
+      border-radius:    0.5rem;
+      background-color: var(--vip-primary);
+      color:            white;
+      padding:          2px 2px 0.5rem 2px;
+      text-align:       center;
+      .image {
+        height:              200px;
+        border-radius:       0.5rem;
+        margin-bottom:       0.5rem;
+        background-size:     cover;
+        background-position: center center;
+      }
+      &:hover {
+        box-shadow: var(--shadow);
+      }
+    }
+  }
 }
 
 /* -- Memberships ---------------------------------------------------------- */
