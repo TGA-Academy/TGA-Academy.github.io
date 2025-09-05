@@ -104,6 +104,9 @@ ul {
 .text-center {
   text-align: center;
 }
+.inline-block {
+  display: inline-block;
+}
 a.large-button {
   display:          inline-block;
   font-size:        1.25rem;
@@ -517,6 +520,10 @@ form[data-leads-form] {
         width:        3rem;
         height:       3rem;
         margin-right: 1rem;
+      }
+      img.raven-logo {
+        display: inline-block;
+        height:  24px;
       }
     }
   }
