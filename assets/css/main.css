@@ -8,7 +8,7 @@
   --max-width:     70rem;
   --nav-height:    70px;
   --shadow:        rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
-  --tint-gradient: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+  --tint-gradient: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
 
 html {
@@ -513,9 +513,12 @@ form[data-leads-form] {
     background-image: var(--tint-gradient), url(/assets/images/index/hero.jpg);
     background-position: center center;
     .location {
-      margin-top: 2rem;
-      display:    flex;
-      color:      white;
+      background-image: var(--tint-gradient);
+      border-radius:    0.5rem;
+      padding:          1rem;
+      margin-top:       2rem;
+      display:          inline-flex;
+      color:            white;
       svg {
         width:        3rem;
         height:       3rem;
