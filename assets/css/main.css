@@ -528,7 +528,7 @@ form[data-leads-form] {
     }
   }
   #countdown-wrapper {
-    background-color: var(--vip-gray);
+    background-color: white;
     #countdown {
       display:         flex;
       gap:             0.5rem;
