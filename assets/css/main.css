@@ -386,6 +386,24 @@ footer {
       align-items: center;
     }
   }
+  section.sponsors {
+    text-align: center;
+    h2 {
+      color: white;
+    }
+    .sponsors-container {
+      display:         flex;
+      gap:             2rem;
+      justify-content: center;
+      flex-wrap:       wrap;
+      a img {
+        border-radius:    0.5rem;
+        background-color: white;
+        height:           125px;
+        width:            125px;
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -398,7 +416,7 @@ footer {
       }
       .social {
         justify-content: center;
-        margin-bottom: 2rem;
+        margin-bottom:   2rem;
       }
     }
   }
